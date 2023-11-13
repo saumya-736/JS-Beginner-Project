@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Instagram</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Gilroy';
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            background-color: cornflowerblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .container{
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            object-fit: cover;
+            object-position: center;
+            height: 250px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        .container i{
+            font-size: 60px;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%) scale(0);
+            transition: transform ease 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <i class="ri-heart-fill"></i>
+    </div>
+    <script>
+        var cont=document.querySelector(".container");
+        var heart=document.querySelector("i");
+        cont.addEventListener("click",function(){
+         heart.style. transform="translate(-50%,-50%) scale(1)";
+         heart.style.color="red";  
+         heart.style.opacity=0.8;
+            setTimeout(()=>{
+            heart.style. opacity=0;
+            heart.style.color="fff";  
+         },1000);
+        
+         setTimeout(()=>{
+            heart.style. transform="translate(-50%,-50%) scale(0)";
+         },3000);
+        
+        });
+        
+    </script>
+</body>
+</html>
