@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html, body{
+    
+    width:100%;
+    height:100%;
+}
+.main{
+    width:100%;
+ min-height: 100vh;
+
+}
+.top
+{
+    width:100%;
+    min-height:  60vh;
+    background-image: url("https://images.unsplash.com/photo-1698859858637-9aa64302f629?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+/*On the top of picture */
+.overlay{
+    width: 100%;
+    min-height: inherit;
+    background-color: rgba(0,0,0,0);
+    position: relative;
+}
+.overlaytext{
+    width: 100%;
+    bottom: 20%;
+    position:absolute;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.overlaytextRight
+{
+width:60% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.overlaytextRight p{
+    font-size: 15px;
+    width: 40%;
+}
+.overlaytext h1{
+    color:#fff;
+    font-size: 6vw;
+    font-weight: 600;
+}
+.icons i{
+    font-size: 20px;
+    color: white;
+    
+}
+.icons i:hover {
+    font-size: 30px;
+    color: pink;
+    
+}
+
+/* Enf of the top of picture */
+.bottom
+{
+    width:100%;
+    min-height:  40vh;
+    display: flex;
+}
+.one
+{
+    min-height: inherit;
+    width: 25%;
+    background-color: rgb(194, 119, 119);
+    color: white;
+    padding: 30px;
+
+}
+.text span:hover{
+    border-bottom: 2px solid #dadada;
+    color: black;
+    background: -webkit-linear-gradient(#eee, #FBCEB1);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+ .text p{
+    
+    font-size:16px ;
+    margin-top: 10px;
+}
+.two
+{
+    min-height: inherit;
+    width: 25%;
+    background-image: url("https://images.unsplash.com/photo-1700322153270-1221b6abe6cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+.three
+{
+     min-height: inherit;
+    width: 20%;
+   
+}
+.threetop
+{
+  min-height:20vh;
+    width:100%;
+    background-color: rgb(202, 134, 8);
+    padding: 30px;
+}
+.threetop span:hover{
+       
+    border-bottom: 2px solid #000;
+   
+}
+.threetop p{
+    font-size: 15px;
+    margin-top: 3px;
+}
+.threebottom
+{
+    min-height:20vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center ;
+    overflow: hidden;
+}
+.four
+{
+    min-height: inherit;
+    width: 30%;
+    background-color: #444;
+    color :white;
+    padding: 30px;
+}
+.roundicon
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.roundicon .photo{
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background-color: black;
+  
+}
+.photo p{
+    text-align: center;
+    margin-top: 6px;
+    margin-left: 1px;
+    
+}
+.roundicon p{
+    width: 86%;
+    font-size: 14px;
+}
+/*  Responsiveness  */
+@media(max-width:500px)
+{
+    .overlay .overlaytext{
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .overlay  .overlaytext h1{
+        font-size: 10vw;
+   }
+    .overlay .overlaytext .overlaytextRight{
+        flex-direction: column;
+        align-items: flex-start;
+     }
+     .overlay .overlaytext .overlaytextRight p{
+        margin-top: 20px;
+        width: initial;
+     }
+     .overlaytext .icons{
+        margin-top: 10px;
+     }
+     .bottom{
+        flex-direction: column;
+        min-height: 20vh;
+        
+       }
+     .bottom .one{
+        width: 100%;
+     }
+     .bottom .two{
+        width: 100%;
+     }
+     .bottom .three{
+        width: 100%;
+        flex-direction: column;
+     }
+     .bottom .four{
+        width: 100%;
+     }
+
+}
+/*ANIMATION ON H1 --NOISE*/
+.overlaytext h1::after {
+    content: "";
+    position: absolute;
+    height: 9px;
+    width: 0;
+    bottom: 0px;
+    background-color: pink;
+    left: 150px;
+   
+}
+
+h1:hover::after{
+    animation-name: line;
+    animation-duration: 2s;
+}
+@keyframes line {
+    0%{
+        width: 0;
+        left:0;
+    }
+    100%{
+        width: 14vw;
+    }
+}
